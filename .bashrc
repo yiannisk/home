@@ -72,23 +72,6 @@ ON_IPURPLE='\[\e[10;95m\]' # Purple
 ON_ICYAN='\[\e[0;106m\]'   # Cyan
 ON_IWHITE='\[\e[0;107m\]'  # White
 
-# OS dependent stuff
-case `uname` in
-  "Linux" )
-    alias ls='ls --color=auto'
-    export LS_COLORS='no=00;32:fi=00:di=00;34:ln=01;36:pi=04;33:so=01;35:bd=33;04:cd=33;04:or=31;01:ex=00;32:*.rtf=00;33:*.txt=00;33:*.html=00;33:*.doc=00;33:*.pdf=00;33:*.ps=00;33:*.sit=00;31:*.hqx=00;31:*.bin=00;31:*.tar=00;31:*.tgz=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.zip=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.deb=00;31:*.dmg=00;36:*.jpg=00;35:*.gif=00;35:*.bmp=00;35:*.ppm=00;35:*.tga=00;35:*.xbm=00;35:*.xpm=00;35:*.tif=00;35:*.mpg=00;37:*.avi=00;37:*.gl=00;37:*.dl=00;37:*.mov=00;37:*.mp3=00;35:'
-    ;;
-  "Darwin" )
-    # Coloured LS
-    alias ls='ls -G'
-    export LSCOLORS=Exfxcxdxbxegedabagacad
-    # JAVA home
-    export JAVA_HOME=/Library/Java/Home
-    # Set greek
-    export LC_CTYPE="el_GR.UTF-8"
-    ;;
-esac
-
 # Include git bash completion script if __git_ps1 function is not available in the shell
 # Normally this will be included in linux git installations but not in MacOSX
 [[ `type -t __git_ps1 2>&1` != 'function' ]] && [[ -r $HOME/.git-completion.bash ]] && source $HOME/.git-completion.bash
@@ -100,9 +83,7 @@ esac
 [[ -r $HOME/.vagrant-completion.bash ]] && source $HOME/.vagrant-completion.bash
 
 # aliases
-alias ll="ls -l"
-alias la="ls -a"
-alias lla="ls -la"
+alias ls='ls -halt --color --time-style=long-iso'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -110,11 +91,23 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 
-# History Controls
-shopt -s histappend # append to the history file, don't overwrite it
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-export HISTCONTROL=ignoreboth
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -122,6 +115,14 @@ HISTFILESIZE=2000
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
