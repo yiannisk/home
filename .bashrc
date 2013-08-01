@@ -92,6 +92,7 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias idea='/opt/idea-IU-129.713/bin/idea.sh &'
 alias bdl='bundle'
+alias chrome='/opt/google/chrome/google-chrome &'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
