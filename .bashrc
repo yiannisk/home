@@ -98,6 +98,7 @@ alias teamcity='chrome http://teamcity7.pamediakopes.local &'
 alias wwwgit='chrome http://git/ &'
 alias redmine='chrome http://redmine.hq.e-travel.gr &'
 alias google="~/./google.sh"
+alias sgit="~/./smartgit.sh"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
