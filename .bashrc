@@ -99,7 +99,7 @@ alias wwwgit='chrome http://git/ &'
 alias redmine='chrome http://redmine.hq.e-travel.gr &'
 alias google="~/./google.sh"
 alias sgit="~/./smartgit.sh"
-
+alias vpn="sudo openvpn ~/openvpn/client.conf &"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -163,3 +163,4 @@ export PROMPT_COMMAND='echo -ne "\033]0;`pwd | xargs basename`\007"'
 export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/opt/Sublime\ Text\ 2
