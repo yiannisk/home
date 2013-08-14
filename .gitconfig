@@ -3,7 +3,7 @@
   email = i.karadimas@pamediakopes.gr
 [core]
   editor = vim
-  excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
   rb = rebase
   sh = stash
@@ -25,7 +25,7 @@
   ignored = ls-files --others -i --exclude-standard
   tree = log --graph --oneline --decorate --topo-order --all
   pt = push tags
-  s = status
+  s = status -sb
 [diff]
   tool = vimdiff
 [difftool]
@@ -45,3 +45,9 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 960x1027+2878+24
+	history-view-vpane-position = 438
+	file-view-vpane-position = 416
+	main-window-view = HistoryView
