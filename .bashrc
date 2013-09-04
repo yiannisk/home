@@ -164,5 +164,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/opt/Sublime\ Text\ 2
+PATH=$PATH:/opt/phantomjs-1.9.1
 
 export RUBYMINE_HOME="/home/ikaradimas/.IntelliJIdea12/config/plugins/ruby"
