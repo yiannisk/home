@@ -100,6 +100,7 @@ alias redmine='chrome http://redmine.hq.e-travel.gr &'
 alias google="~/./google.sh"
 alias sgit="~/./smartgit.sh"
 alias vpn="sudo openvpn ~/openvpn/client.conf &"
+alias wrath="~/wrath.sh"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -165,5 +166,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/opt/Sublime\ Text\ 2
 PATH=$PATH:/opt/phantomjs-1.9.1
+PATH=$PATH:/usr/share/qt4/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:$JAVA_HOME/bin
 
 export RUBYMINE_HOME="/home/ikaradimas/.IntelliJIdea12/config/plugins/ruby"
+export JAVA_HOME="/usr/local/java/jdk1.7.0_45"
