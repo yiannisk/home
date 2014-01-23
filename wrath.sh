@@ -12,7 +12,10 @@ echo "Found $pids_minus_self processes."
 
 if [ $pids_minus_self != '0' ]
 then
-  kill -9 $pids
+  for pid in $pids; do
+    sudo kill -9 $pid
+  done
+
   echo "$pids_minus_self processes are dead."
 fi
 
