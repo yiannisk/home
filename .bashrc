@@ -99,7 +99,7 @@ alias wwwgit='nohup chrome http://git/ &'
 alias redmine='nohup chrome http://redmine.hq.e-travel.gr &'
 alias google="nohup ~/./google.sh"
 alias sgit="nohup ~/./smartgit.sh"
-alias vpn-1="sudo openvpn ~/openvpn/awseuwest1b_client.conf &"
+alias vpn-1="sudo openvpn ~/openvpn/awseuwest1b_client_2step.conf"
 alias vpn-2="sudo openvpn ~/openvpn/awseuwest2a_client.conf &"
 alias wrath="~/wrath.sh"
 # ~/.bashrc: executed by bash(1) for non-login shells.
