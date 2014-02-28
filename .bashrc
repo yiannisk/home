@@ -90,13 +90,13 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
-alias idea='nohup /opt/idea-IU-129.713/bin/idea.sh &'
+alias idea='nohup /opt/idea-IU-133.696/bin/idea.sh &'
 alias bdl='bundle'
 alias chrome='nohup /opt/google/chrome/google-chrome'
 alias hipchat='nohup /opt/HipChat/bin/hipchat &'
-alias teamcity='nohup chrome http://teamcity7.pamediakopes.local &'
-alias wwwgit='nohup chrome http://git/ &'
-alias redmine='nohup chrome http://redmine.hq.e-travel.gr &'
+alias teamcity='nohup /opt/google/chrome/google-chrome http://teamcity7.pamediakopes.local &'
+alias wwwgit='nohup /opt/google/chrome/google-chrome http://git/ &'
+alias redmine='nohup /opt/google/chrome/google-chrome http://redmine.hq.e-travel.gr &'
 alias google="nohup ~/./google.sh"
 alias sgit="nohup ~/./smartgit.sh"
 alias vpn-1="sudo openvpn ~/openvpn/awseuwest1b_client_2step.conf"
@@ -150,8 +150,7 @@ PS1_HOST=`hostname -s`
 PS1_DIR="\w"
 [[ -s $HOME/.rvm/bin/rvm-prompt ]]          && PS1_RVM=" (\$($HOME/.rvm/bin/rvm-prompt i v g))"
 [[ `type -t __git_ps1 2>&1` = 'function' ]] && PS1_GIT=" (\$(__git_ps1 %s))"
-
-export PS1="$COLOR_OFF[$PS1_USER@$PS1_HOST $GREEN$PS1_DIR$PURPLE$PS1_RVM$RED$PS1_GIT$COLOR_OFF] "
+export PS1="$COLOR_OFF[$PS1_USER@$PS1_HOST $GREEN$PS1_DIR$ON_IPURPLE$PS1_RVM$YELLOW$PS1_GIT$COLOR_OFF] "
 unset PS1_USER PS1_HOST PS1_DIR PS1_RVM PS1_GIT
 
 # set the title of the terminal to the folder you are into 
