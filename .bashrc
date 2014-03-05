@@ -90,7 +90,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
-alias idea='nohup /opt/idea-IU-129.713/bin/idea.sh &'
+alias idea='nohup /opt/intellij/bin/idea.sh &'
 alias bdl='bundle'
 alias chrome='nohup /opt/google/chrome/google-chrome'
 alias hipchat='nohup /opt/HipChat/bin/hipchat &'
@@ -150,21 +150,18 @@ PS1_HOST=`hostname -s`
 PS1_DIR="\w"
 [[ -s $HOME/.rvm/bin/rvm-prompt ]]          && PS1_RVM=" (\$($HOME/.rvm/bin/rvm-prompt i v g))"
 [[ `type -t __git_ps1 2>&1` = 'function' ]] && PS1_GIT=" (\$(__git_ps1 %s))"
-
-export PS1="$COLOR_OFF[$PS1_USER@$PS1_HOST $GREEN$PS1_DIR$PURPLE$PS1_RVM$RED$PS1_GIT$COLOR_OFF] "
+export PS1="$COLOR_OFF[$PS1_USER@$PS1_HOST $GREEN$PS1_DIR$ON_IPURPLE$PS1_RVM$YELLOW$PS1_GIT$COLOR_OFF] "
 unset PS1_USER PS1_HOST PS1_DIR PS1_RVM PS1_GIT
 
 # set the title of the terminal to the folder you are into 
 export PROMPT_COMMAND='echo -ne "\033]0;`pwd | xargs basename`\007"'
 
 # RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/opt/Sublime\ Text\ 2
 PATH=$PATH:/opt/phantomjs-1.9.1
 PATH=$PATH:/usr/share/qt4/bin
@@ -174,3 +171,5 @@ PATH=$PATH:/opt/leiningen/bin
 
 export RUBYMINE_HOME="/home/ikaradimas/.IntelliJIdea12/config/plugins/ruby"
 export JAVA_HOME="/usr/local/java/jdk1.7.0_45"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
