@@ -102,6 +102,7 @@ alias sgit="nohup ~/./smartgit.sh"
 alias vpn-1="sudo openvpn ~/openvpn/awseuwest1b_client_2step.conf"
 alias vpn-2="sudo openvpn ~/openvpn/awseuwest2a_client.conf &"
 alias wrath="~/wrath.sh"
+alias sublime_text="nohup /opt/sublime_text_2.0.2/sublime_text &"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
