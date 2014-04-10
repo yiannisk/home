@@ -171,6 +171,7 @@ PATH=$PATH:/usr/share/qt4/bin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:$JAVA_HOME/bin
 PATH=$PATH:/opt/leiningen/bin
+PATH=$PATH:/opt/phantomjs-1.9.7-linux-i686/bin
 
 export RUBYMINE_HOME="/home/ikaradimas/.IntelliJIdea12/config/plugins/ruby"
 export JAVA_HOME="/usr/local/java/jdk1.7.0_45"
