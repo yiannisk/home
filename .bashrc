@@ -102,7 +102,7 @@ alias sgit="nohup ~/./smartgit.sh"
 alias vpn-1="sudo openvpn ~/openvpn/awseuwest1b_client_2step.conf"
 alias vpn-2="sudo openvpn ~/openvpn/awseuwest2a_client.conf &"
 alias wrath="~/wrath.sh"
-alias sublime_text="nohup /opt/sublime_text_2.0.2/sublime_text &"
+alias sublime_text="nohup /opt/Sublime\ Text\ 2/sublime_text &"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -165,7 +165,6 @@ export PROMPT_COMMAND='echo -ne "\033]0;`pwd | xargs basename`\007"'
 export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:/opt/Sublime\ Text\ 2
 PATH=$PATH:/opt/phantomjs-1.9.1
 PATH=$PATH:/usr/share/qt4/bin
 PATH=$PATH:/usr/local/bin
@@ -173,5 +172,5 @@ PATH=$PATH:$JAVA_HOME/bin
 PATH=$PATH:/opt/leiningen/bin
 PATH=$PATH:/opt/phantomjs-1.9.7-linux-i686/bin
 
-export RUBYMINE_HOME="/home/ikaradimas/.IntelliJIdea12/config/plugins/ruby"
+export RUBYMINE_HOME="/home/yiannisk/.IntelliJIdea13/config/plugins/ruby"
 export JAVA_HOME="/usr/local/java/jdk1.7.0_45"
